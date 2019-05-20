@@ -3,6 +3,10 @@
  * 
  */
 
+* {
+box-sizing: border-box;
+}
+
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	background: #f4f4f4;
@@ -26,9 +30,17 @@ a:hover {
 	text-decoration: underline;
 }
 
+.nav-list {
+	list-style: none;
+	padding: 0;
+}
+
 .content {
-	width: 940px;
+	/* width: 940px; */
+	width: 100%;
 	margin: 0 auto;
+	padding-left: 15px;
+	position: relative;
 }
 
 #header  {
@@ -36,23 +48,35 @@ a:hover {
 }
 
 #nav {
+	width: 35%;
+	height: 100%;
 	margin: 0 20px 0 0;
+	float: left;
+	/* padding-left: 15px; */
+	position: absolute;
   /* CHALLENGE 3: how could you get this to float to the left side of the screen? */
 }
 
-#main {
+#main { /*or div > #main*/
 	margin: 0;
+	padding-left: 15px;
+	width: 65%;
+	border-left: 1px solid #888;
+	float: right;
+	
   /*  CHALLENGE 3: how could you get this to float to the left side of the screen? */
   /* CHALLENGE 2: how could you give this element a one-pixel border down its left side? */
 }
 
+
 #copyright {
 	margin-top: 30px;
 	margin-bottom: 30px;
+	text-align: center;
 }
 
 
 /* Ignore this for now, it is special code needed to fix the layout after using the "float" rules */
-.clearfix:before, .clearfix:after { content:""; display:table; }
+.clearfix:before, .clearfix:after { content:""; display:table;}
 .clearfix:after { clear:both; }
 .clearfix { zoom:1; }
